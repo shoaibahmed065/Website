@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Dynamic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="logo6.png" alt="logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+           <div class="overlay"></div>
+           <img src="mobile4.png" class="mobile">
+           <div id="circle">
+               <div class="feature one">
+                   <img src="camera.png">
+                   <div>
+                       <h1>Camera</h1>
+                       <p>Triple camera 50MP, 16MP, 2MP<br> Dual-led flash, HDR, Panorama</p>
+                   </div>
+               </div>
+               <div class="feature two">
+                   <img src="processor.png">
+                   <div>
+                       <h1>Processor</h1>
+                       <p>Qualcomm® Snapdragon™ Octa-core 888 5G</p>
+                   </div>
+               </div>
+               <div class="feature three">
+                   <img src="display.png">
+                   <div>
+                       <h1>Display</h1>
+                       <p>Amoled, 120HZ, HDR10+, 6.62 Inches, </p>
+                   </div>
+               </div>
+               <div class="feature four">
+                   <img src="battery.png">
+                   <div>
+                       <h1>Battery</h1>
+                       <p>Li-po 4500MAH, Fast charging 65W, 100% in 29 mins</p>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="arrow.png" id="upbtn">
+            <h3>Features</h3>
+            <img src="arrow.png" id="downbtn">
+        </div>
+    </div>
+       
+    <script>
+        var circle=document.getElementById("circle");
+        var upbtn=document.getElementById("upbtn");
+        var downbtn=document.getElementById("downbtn");
+        
+        var rotatevalue=circle.style.transform;
+        var rotatesum;
+        
+        upbtn.onclick=function()
+        {
+            rotatesum=rotatevalue+"rotate(-90deg)";
+            circle.style.transform=rotatesum;
+            rotatevalue=rotatesum;
+        }
+        downbtn.onclick=function()
+        {
+            rotatesum=rotatevalue+"rotate(90deg)";
+            circle.style.transform=rotatesum;
+            rotatevalue=rotatesum;
+        }
+    </script>
+        
+</body>
+</html>>
